@@ -1,4 +1,4 @@
-This is a project for transcribing, archiving and displaying podcast transcriptions, similar to Andrej Karpathy's "Lexicap".
+This is a Python project for transcribing, archiving and displaying podcast transcriptions, similar to Andrej Karpathy's "Lexicap".
 
 The goal is to create podcast transcriptions with diarization (speaker identification) and subsequently archive them in well-organized JSON files.
 The JSON files are subsequently used for generating HTML pages which display the transcripts in a clear way.
