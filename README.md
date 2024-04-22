@@ -5,12 +5,17 @@ The JSON files are subsequently used for generating HTML pages which display the
 
 Although the files in this repository are a subset of the entire project, you can find some examples of the transcripts, json and html files for both a podcast with Dr. Michael Levin and Hamilton Morris. 
 
-The script "transcribe_and_diarize.py" contains an end-to-end pipeline for transcribing & diarizing new audio files from the data folder,
-orgizing the results in the JSON format and lastly automatically creating the HTML page.
+The script "transcribe_and_diarize.py" contains an end-to-end pipeline for transcribing & diarizing new audio files from the data folder, correcting word errors,
+organizing the results in the JSON format and lastly automatically creating the HTML page.
 This pipeline should be run from the command line, and can either take the following arguments:
 - Filepath to audio file: this only transcribes 1 audio file.
 - "Michael" or "Hamilton", followed by "youtube_guest" or "youtube_lectures", which transcribes all audio files in the raw_audio folder of the respective podcaster.
 
 The primary tools used are the following:
 - Whisper: transcription software created by OpenAI which runs locally
-- Pyannote: diarization models for speaker identification
+- Pyannote: diarization models for speaker identification.
+
+For Pyannote to work, an authentication token is required to be added in the constants.py file.
+This authentication token can be acquired throught the 2 steps below:
+1) Visit hf.co/pyannote/speaker-diarization and accept user conditions
+2) Visit hf.co/pyannote/segmentation and accept user conditions
